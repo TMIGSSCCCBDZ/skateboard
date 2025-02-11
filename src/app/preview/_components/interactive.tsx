@@ -58,7 +58,7 @@ export const Interactive = () => {
         <h1 className="font-bold font-mono text-2xl text-white">Bolt Color</h1>
     <div className="flex w-full items-center justify-center py-2 flex-wrap gap-x-1 gap-y-2">
 {boltColors.map(({colorHex,colorName}) => (
-    <span onClick={() => {setBoltColor(colorHex)}} className="w-8 h-8 cursor-pointer flex items-center justify-center font-mono font-bold rounded-full" style={{backgroundColor: colorHex}}>
+    <span key={colorHex} onClick={() => {setBoltColor(colorHex)}} className="w-8 h-8 cursor-pointer flex items-center justify-center font-mono font-bold rounded-full" style={{backgroundColor: colorHex}}>
         
     </span>
 ))}
@@ -68,7 +68,7 @@ export const Interactive = () => {
         <h1 className="font-bold font-mono text-2xl text-white">Truck Color</h1>
     <div className="flex w-full items-center justify-center py-2 flex-wrap gap-x-1 gap-y-2">
 {truckColors.map(({colorHex,colorName}) => (
-    <span onClick={() => {setTruckColor(colorHex)}} className="w-8 h-8 cursor-pointer flex items-center justify-center font-mono font-bold rounded-full" style={{backgroundColor: colorHex}}>
+    <span key={colorHex} onClick={() => {setTruckColor(colorHex)}} className="w-8 h-8 cursor-pointer flex items-center justify-center font-mono font-bold rounded-full" style={{backgroundColor: colorHex}}>
         
     </span>
 ))}
@@ -78,7 +78,7 @@ export const Interactive = () => {
         <h1 className="font-bold font-mono text-2xl text-white">Deck Texture</h1>
     <div className="flex w-full items-center justify-center py-2 flex-wrap gap-x-1 gap-y-2">
 {deckTextures.map(({textureName,name}) => (
-    <img onClick={() => {setDeckTexture(textureName)}} src={textureName} className={`w-12 h-12 cursor-pointer  flex items-center justify-center object-contain `} />
+    <img key={textureName} onClick={() => {setDeckTexture(textureName)}} src={textureName} className={`w-12 h-12 cursor-pointer  flex items-center justify-center object-contain `} />
         
    
 ))}
@@ -88,7 +88,7 @@ export const Interactive = () => {
         <h1 className="font-bold font-mono text-2xl text-white">Wheel Texture</h1>
     <div className="flex w-full items-center justify-center py-2 flex-wrap gap-x-1 gap-y-2">
 {wheelTextures.map(({textureName,name}) => (
-    <img onClick={() => {setWheelTexture(textureName)}} src={textureName} className={`w-10 h-10 cursor-pointer  flex items-center justify-center object-cover rounded-full `} />
+    <img key={textureName} onClick={() => {setWheelTexture(textureName)}} src={textureName} className={`w-10 h-10 cursor-pointer  flex items-center justify-center object-cover rounded-full `} />
         
    
 ))}

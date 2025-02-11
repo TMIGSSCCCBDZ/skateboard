@@ -89,7 +89,7 @@ gribTabeDiffuse.anisotropy = 8
     truckNormal.anisotropy = 8
     return material
 
-  }, [truckColor])
+  }, [truckColor,truckNormal])
     const deckTexture = useLoader(THREE.TextureLoader, deck);
 
   const deckMaterial = useMemo(() => {
